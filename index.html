@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>VALORANT</title>
+    <!-- yahape hum chartjs library through cdn import karrahe he -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@3.5.1/dist/chart.min.js"></script>
+    <!-- yahape humne Nunito he google font import kiya -->
+    <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet"/>
+    <!-- here humne css file ko link kiya -->
+    <!-- ****************isko uncomment karna he**************** -->
+    <link rel="stylesheet" href="style.css" />  
+  </head>
+  <body>
+    <!-- ********************ab body tag ke start se end tak hum uncomment karenge***************** -->
+    <div class="grid-container">
+      <div class="menu-icon">
+        <strong> &#9776;</strong>
+      </div>
+      <header class="header">
+        <div class="header_search" style="color: #9297A3;">
+          <img src="https://img.icons8.com/color/48/000000/search--v1.png" height="28px"/>
+          Search...</div>
+        <div class="header_avatar">
+          <img src="images/bell.png" style="padding-right:10px" height="30px" width="30px"/>
+          <img src="images/valorant.png" style="margin-top: 5px; padding-right:10px" height="40px" width="40px" alt="profile"/>
+          <img src="images/more.png" style="padding-right:10px" height="30px" width="30px"/>
+        </div>
+      </header>
+      <aside class="aside">
+        <div class="aside_close-icon">
+          <strong>&times;</strong>
+        </div>
+        <ul class="aside_list">
+          <li class="aside_list-item"><img src="images/riot.png" style="padding-right:10px" height="40px" width="40px"/>Agents</li>
+          <li class="aside_list-item"><img src="images/jett.png" style="padding-right:10px" height="40px" width="40px"/>Jett</li>
+          <li class="aside_list-item"><img src="images/omen.png" style="padding-right:10px" height="40px" width="40px"/>Omen</li>
+          <li class="aside_list-item"><img src="images/pho.png" style="padding-right:10px" height="40px" width="40px"/>Phoenix</li>
+          <li class="aside_list-item"><img src="images/sova.png" style="padding-right:10px" height="45px" width="45px"/>Sova</li>
+          <li class="aside_list-item"><img src="images/brim.png" style="padding-right:10px" height="45px" width="45px"/>Brimstone</li>
+          <li class="aside_list-item"><img src="images/reyna.png" style="padding-right:10px" height="30px" width="30px"/>Reyna</li>
+          <li class="aside_list-item"><img src="images/sage.png" style="padding-right:10px" height="30px" width="30px"/>Sage</li>
+          <li class="aside_list-item"><img src="images/astra.png" style="padding-right:10px" height="30px" width="30px"/>Astra</li>
+        </ul>
+      </aside>
+      <main class="main">
+        <h3 class="font-weight-bold" style="padding-left: 20px; font-size:25px"><span style="color:rgb(55, 240, 178)">Let's Start this Party!</span></h3>
+        <h6 style="padding-left: 20px; font-size:15px; margin-top:-20px" ><span style ="color: azure" >Welcome to VALORANT....There are currently </span><span style="color:rgb(68, 245, 186)">14,00,000 players active!</span></h6>
+        <div class="main_overview">
+          <div
+            class="overview_card"
+            style="background-color: #7da0fa; height: 100px"
+          >
+            <div class="overview_card-info">5</div>
+            <div class="overview_card-icon">Duelists</div>
+            <div class="overview_card-inc">(Jett Phoenix Raze Reyna Yoru)</div>
+          </div>
+          <div
+            class="overview_card"
+            style="background-color: #4747a1; height: 100px"
+          >
+            <div class="overview_card-info">4</div>
+            <div class="overview_card-icon">Controllers</div>
+            <div class="overview_card-inc">(Astra Brimstone Omen Viper)</div>
+          </div>
+          <div
+            class="overview_card"
+            style="background-color: #7978e9; height: 100px"
+          >
+            <div class="overview_card-info">3</div>
+            <div class="overview_card-icon">Sentinels</div>
+            <div class="overview_card-inc">(Cypher Killjoy Sage)</div>
+          </div>
+          <div
+            class="overview_card"
+            style="background-color: #f3797e; height: 100px"
+          >
+            <div class="overview_card-info">4</div>
+            <div class="overview_card-icon">Initiators</div>
+            <div class="overview_card-inc">(Breach KAY/O Skye Sova)</div>
+          </div>
+        </div>
+
+        <div class="main_cards">
+          <div class="card">
+            <canvas id="barchart"></canvas>
+          </div>
+          <div class="card">
+            <canvas id="areachart"></canvas>
+          </div>
+          <div class="card">
+            <canvas id="linechart"></canvas>
+          </div>
+        </div>
+
+        
+        <div class="main_overview">
+          <div class="overview_card">
+            <canvas id="doughnutchart"></canvas>
+          </div>
+          <div class="overview_card">
+            <canvas id="radarchart"></canvas>
+          </div>
+        </div>
+
+        
+        <div class="main_overview">
+          <div class="overview_card">
+            <canvas id="horizontalbar"></canvas>
+          </div>
+          <div class="overview_card">
+            <canvas id="polararea"></canvas>
+          </div>
+          <div class="overview_card">
+            <canvas id="mixedcharts"></canvas>
+          </div>
+        </div>
+      </main>
+      <footer class="footer">
+        <div class="footer_copyright">&copy;<span style = "color:rgb(55, 240, 178)">By SagarPujari & PrathamAngre</span></div>
+      </footer>
+    </div>
+
+    <script type="text/javascript" src="./js/main.js"></script>
+    <script type="text/javascript" src="./js/areachart.js"></script>
+    <script type="text/javascript" src="./js/radarchart.js"></script>
+    <script type="text/javascript" src="./js/linechart.js"></script>
+    <script type="text/javascript" src="./js/doughnutchart.js"></script>
+    <script type="text/javascript" src="./js/horizontalBar.js"></script>
+    <script type="text/javascript" src="./js/polararea.js"></script>
+    <script type="text/javascript" src="./js/mixedcharts.js"></script>
+  </body>
+</html>
